@@ -1,6 +1,11 @@
 const express = require('express') // Using Express package
 const app = express()
-const authroutes = require('./routes/routes')        // calling the routes module 
+const authroutes = require('./routes/routes')        // calling the routes module
+
+
+require('./database/connection')///Importing Connection module
+require('./model/userSchema')///Importing userSchema
+
 
 
 app.use('/', authroutes)                 //using the route module 
