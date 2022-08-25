@@ -6,7 +6,7 @@ const authroutes = require('./routes/routes')        // calling the routes modul
 require('./database/connection')///Importing Connection module
 require('./model/userSchema')///Importing userSchema
 
-
+app.use(express.json())  //Read json format
 
 app.use('/', authroutes)                 //using the route module 
 
