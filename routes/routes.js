@@ -38,7 +38,7 @@ route.post('/login', async (req, res) => {  // login page  route
         }
 
 
-        res.status(200).send()
+       
     }
     else {
         res.status(400).send("User doesn't Exist")
