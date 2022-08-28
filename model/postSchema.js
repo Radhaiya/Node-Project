@@ -18,4 +18,6 @@ const userSchema = new mongoose.Schema({
 
 
 
+
+
 module.exports = mongoose.model('newCollection',userSchema)
