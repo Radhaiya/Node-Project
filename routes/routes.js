@@ -14,8 +14,8 @@ route.post('/register', async (req, res) => { //register page route
             name: req.body.name,
             email: req.body.email,
             password: req.body.password
-        })  
-        
+        })
+
         await newuser.save() // Saves the user in database
 
         res.send("Registered Successfully")
@@ -24,9 +24,11 @@ route.post('/register', async (req, res) => { //register page route
 
 route.post('/login', async (req, res) => {  // login page  route
     const userExist = await user.findOne({ email: req.body.email })
-    if (userExist) {
 
-        if (userExist.password == req.body.password) {
+
+    if (userExist) {// Checks if user exist 
+
+        if (userExist.password == req.body.password) { //Verify Password 
             res.send("Login Success")
         }
 
